@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Murillo · Mecánica Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        :root {
+            --azul: #0a1a28;
+            --oro: #f0b400;
+        }
+
+        body {
+            background: #f4f7fc;
+        }
+
+        header {
+            background: var(--azul);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--oro);
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu li a:hover {
+            color: var(--oro);
+        }
+
+        .hamburguesa {
+            display: none;
+            font-size: 2rem;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid var(--oro);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-imagen {
+            min-height: 350px;
+            background: linear-gradient(145deg, #1e3a4a, #0a1a28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--oro);
+            font-size: 4rem;
+        }
+
+        .hero-content {
+            padding: 2.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: var(--azul);
+            line-height: 1.2;
+        }
+
+        .hero-content h1 small {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--oro);
+            font-weight: 300;
+        }
+
+        .badge {
+            background: var(--oro);
+            color: var(--azul);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .servicios-destacados {
+            background: #f0f0f0;
+            padding: 1.2rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 6px solid var(--oro);
+        }
+
+        .direccion {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin: 1rem 0;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .btn-wsp {
+            background: #25D366;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-llamada {
+            background: var(--azul);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-compartir {
+            background: var(--oro);
+            color: var(--azul);
+            padding: 0.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border: 2px solid var(--azul);
+        }
+
+        .seccion {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .seccion h2 {
+            color: var(--azul);
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--oro);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--oro);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--azul);
+            margin-bottom: 1rem;
+        }
+
+        .contacto-box {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            border: 2px solid var(--oro);
+            text-align: center;
+        }
+
+        .footer-afiliado {
+            background: var(--azul);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 5px solid var(--oro);
+        }
+
+        .afiliado-link {
+            background: var(--oro);
+            color: var(--azul);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .afiliado-link a {
+            color: var(--azul);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .hamburguesa {
+                display: block;
+            }
+            .menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--azul);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+            .menu.mostrar {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">TALLER <span>MURILLO</span></div>
+        <button class="hamburguesa" id="menuBtn">☰</button>
+        <ul class="menu" id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+<main id="inicio">
+    <section class="hero">
+        <div class="hero-imagen">🔧</div>
+        <div class="hero-content">
+            <span class="badge">⚙️ MECÁNICA PROFESIONAL</span>
+            <h1>YESID <small>MURILLO</small></h1>
+            
+            <div class="servicios-destacados">
+                <strong>🔧 SERVICIOS ESPECIALIZADOS</strong><br>
+                • Scanner · Sincronización · Mecánica general<br>
+                • Toda clase de vehículos · Atención personalizada
+            </div>
+
+            <div class="direccion">
+                📍 <strong>Avenida 5 N° 0-50</strong><br>
+                La Merced · Cúcuta, Colombia
+            </div>
+
+            <div class="botones">
+                <a href="https://wa.me/573204891155?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 WhatsApp 320 489 1155
+                </a>
+                <a href="https://wa.me/573203007128?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 WhatsApp 320 300 7128
+                </a>
+                <a href="tel:+573204891155" class="btn-llamada">
+                    📞 Llamar ahora
+                </a>
+                <a href="https://wa.me/?text=¡Mira%20lo%20que%20encontré!%20Taller%20Murillo%20👉%20https://taller-murillo.netlify.app" class="btn-compartir" target="_blank">
+                    🎁 Compartir con un amigo
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section id="servicios" class="seccion">
+    <h2>SERVICIOS</h2>
+    <div class="grid-3">
+        <div class="card">
+            <h3>🔧 Scanner</h3>
+            <p>Diagnóstico computarizado para todas las marcas. Detección precisa de fallas.</p>
+        </div>
+        <div class="card">
+            <h3>⚙️ Sincronización</h3>
+            <p>Ajuste de sistemas electrónicos, puesta a punto y calibración.</p>
+        </div>
+        <div class="card">
+            <h3>🛞 Mecánica general</h3>
+            <p>Mantenimiento preventivo y correctivo. Revisión completa de su vehículo.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="contacto-box">
+    <h2 style="color: var(--azul);">📞 CONTACTO DIRECTO</h2>
+    <p style="font-size: 1.3rem; margin: 1rem 0;"><strong>Yesid Murillo</strong> · Propietario</p>
+    <p style="font-size: 1.2rem;">📱 320 489 1155 · 320 300 7128</p>
+    <p>📍 Avenida 5 N° 0-50, La Merced · Cúcuta</p>
+    <p>⏰ Lunes a sábado 8am - 6pm</p>
+    <div style="margin-top: 1.5rem;">
+        <a href="https://wa.me/573204891155" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 Contactar por WhatsApp</a>
+    </div>
+</section>
+
+<footer class="footer-afiliado">
+    <p>&copy; 2026 Taller Murillo · Todos los derechos reservados</p>
+    <p>Mecánica profesional con más de 15 años de experiencia</p>
+    <div class="afiliado-link">
+        🔥 <a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Taller%20Murillo" target="_blank">¿Quieres tu propia tarjeta digital?</a>
+    </div>
+    <p style="margin-top: 1rem;">Esta tarjeta fue creada por <strong>Tu Tarjeta Digital</strong> · Si alguien compra por este enlace, Yesid gana comisión.</p>
+    <p><a href="https://tusitio.com/ref/taller-murillo" style="color: var(--oro);">Enlace de afiliado de Yesid</a></p>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+    });
+
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('mostrar');
+        });
+    });
+</script>
+
+</body>
+</html>
