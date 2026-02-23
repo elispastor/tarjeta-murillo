@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Taller Murillo · Mecánica Profesional</title>
+    <title>Taller Murillo · Mecánica Profesional</title>
     <style>
         * {
             margin: 0;
@@ -82,7 +82,6 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        /* ESCÁNER ANIMADO (IZQUIERDA) */
         .hero-imagen {
             min-height: 350px;
             background: linear-gradient(145deg, #0a141f, #0f1a2a);
@@ -236,30 +235,21 @@
             display: block;
         }
 
-        /* PARTE DERECHA: CONTENIDO DEL TALLER */
         .hero-content {
             padding: 2.5rem;
         }
 
-        /* TÍTULO PRINCIPAL DEL NEGOCIO (AUTO TALLER MURILLO) */
-        .titulo-negocio {
-            font-size: 3.2rem;
-            font-weight: 900;
+        .hero-content h1 {
+            font-size: 2.8rem;
             color: var(--azul);
-            line-height: 1.1;
-            text-transform: uppercase;
-            margin-bottom: 0.3rem;
-            text-shadow: 3px 3px 0 rgba(240,180,0,0.2);
+            line-height: 1.2;
         }
 
-        .subtitulo-negocio {
-            font-size: 1.8rem;
-            font-weight: 400;
+        .hero-content h1 small {
+            display: block;
+            font-size: 1.2rem;
             color: var(--oro);
-            letter-spacing: 4px;
-            border-bottom: 2px solid var(--oro);
-            padding-bottom: 0.8rem;
-            margin-bottom: 1.5rem;
+            font-weight: 300;
         }
 
         .badge {
@@ -335,6 +325,115 @@
             border: 2px solid var(--azul);
         }
 
+        /* ===== SECCIÓN MISIÓN, VISIÓN, VALORES (NUEVA) ===== */
+        .seccion-filosofia {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 30px;
+            border: 3px solid var(--oro);
+            text-align: center;
+        }
+
+        .seccion-filosofia h2 {
+            color: var(--azul);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid var(--oro);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid-filosofia {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .filosofia-item {
+            background: #f8fafd;
+            padding: 2rem;
+            border-radius: 20px;
+            border-top: 6px solid var(--oro);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .filosofia-item h3 {
+            color: var(--azul);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .filosofia-item p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .filosofia-item ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .filosofia-item li {
+            margin: 0.8rem 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filosofia-item li::before {
+            content: "✓";
+            color: var(--oro);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* ===== SECCIÓN QR (NUEVA) ===== */
+        .seccion-qr {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 40px;
+            border: 3px solid var(--oro);
+            text-align: center;
+        }
+
+        .seccion-qr h2 {
+            color: var(--azul);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .qr-container img {
+            max-width: 250px;
+            border-radius: 20px;
+            border: 5px solid var(--oro);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .qr-texto {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 500px;
+        }
+
+        .qr-texto strong {
+            color: var(--azul);
+        }
+
+        /* ===== SECCIONES EXISTENTES ===== */
         .seccion {
             max-width: 1200px;
             margin: 3rem auto;
@@ -407,7 +506,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero, .grid-3 {
+            .hero, .grid-3, .grid-filosofia {
                 grid-template-columns: 1fr;
             }
             .hamburguesa {
@@ -435,11 +534,13 @@
 
 <header>
     <div class="nav-container">
-        <div class="logo">AUTO <span>TALLER MURILLO</span></div>
+        <div class="logo">TALLER <span>MURILLO</span></div>
         <button class="hamburguesa" id="menuBtn">☰</button>
         <ul class="menu" id="menu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#filosofia">Filosofía</a></li>
+            <li><a href="#qr">QR</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </div>
@@ -447,7 +548,7 @@
 
 <main id="inicio">
     <section class="hero">
-        <!-- ESCÁNER ANIMADO -->
+        <!-- ESCÁNER ANIMADO (ORIGINAL) -->
         <div class="hero-imagen">
             <div class="scanner-container">
                 <div class="scanner-screen">
@@ -479,10 +580,10 @@
             </div>
         </div>
 
-        <!-- PARTE DERECHA: NOMBRE DEL TALLER Y DATOS -->
+        <!-- PARTE DERECHA (TEXTO ORIGINAL) -->
         <div class="hero-content">
-            <div class="titulo-negocio">AUTO TALLER MURILLO</div>
-            <div class="subtitulo-negocio">MECÁNICA PROFESIONAL</div>
+            <span class="badge">⚙️ MECÁNICA PROFESIONAL</span>
+            <h1>YESID <small>MURILLO</small></h1>
             
             <div class="servicios-destacados">
                 <strong>🔧 SERVICIOS ESPECIALIZADOS</strong><br>
@@ -496,16 +597,16 @@
             </div>
 
             <div class="botones">
-                <a href="https://wa.me/573204891155?text=Hola%20José,%20necesito%20información%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
-                    📱 José · 320 489 1155
+                <a href="https://wa.me/573204891155?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 WhatsApp 320 489 1155
                 </a>
-                <a href="https://wa.me/573203007128?text=Hola%20Yesid,%20necesito%20información%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
-                    📱 Yesid · 320 300 7128
+                <a href="https://wa.me/573203007128?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 WhatsApp 320 300 7128
                 </a>
                 <a href="tel:+573204891155" class="btn-llamada">
                     📞 Llamar ahora
                 </a>
-                <a href="https://wa.me/?text=¡Mira%20lo%20que%20encontré!%20Auto%20Taller%20Murillo%20👉%20https://autotallermurillo.netlify.app" class="btn-compartir" target="_blank">
+                <a href="https://wa.me/?text=¡Mira%20lo%20que%20encontré!%20Taller%20Murillo%20👉%20https://autotallermurillo.netlify.app" class="btn-compartir" target="_blank">
                     🎁 Compartir con un amigo
                 </a>
             </div>
@@ -513,6 +614,7 @@
     </section>
 </main>
 
+<!-- SECCIÓN DE SERVICIOS (ORIGINAL) -->
 <section id="servicios" class="seccion">
     <h2>SERVICIOS</h2>
     <div class="grid-3">
@@ -531,26 +633,62 @@
     </div>
 </section>
 
+<!-- NUEVA SECCIÓN: MISIÓN, VISIÓN, VALORES -->
+<section id="filosofia" class="seccion-filosofia">
+    <h2>NUESTRA FILOSOFÍA</h2>
+    <div class="grid-filosofia">
+        <div class="filosofia-item">
+            <h3>🎯 Misión</h3>
+            <p>Brindar un servicio mecánico honesto, rápido y de calidad, garantizando la satisfacción y seguridad de nuestros clientes.</p>
+        </div>
+        <div class="filosofia-item">
+            <h3>👁️ Visión</h3>
+            <p>Ser el taller mecánico de referencia en Cúcuta, reconocido por nuestra ética profesional y trato personalizado.</p>
+        </div>
+        <div class="filosofia-item">
+            <h3>⭐ Valores</h3>
+            <ul>
+                <li><strong>Honestidad:</strong> En diagnósticos y presupuestos</li>
+                <li><strong>Compromiso:</strong> Con tu tiempo y tu vehículo</li>
+                <li><strong>Calidad:</strong> En cada reparación</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- NUEVA SECCIÓN: CÓDIGO QR GENERAL -->
+<section id="qr" class="seccion-qr">
+    <h2>📲 COMPARTE ESTA TARJETA</h2>
+    <div class="qr-container">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://autotallermurillo.netlify.app" alt="Código QR de Auto Taller Murillo">
+        <div class="qr-texto">
+            <p>Escanea este código para ver la tarjeta digital de <strong>Auto Taller Murillo</strong> desde cualquier dispositivo.</p>
+            <p style="margin-top: 1rem;">🔗 <strong>https://autotallermurillo.netlify.app</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN DE CONTACTO (ORIGINAL) -->
 <section id="contacto" class="contacto-box">
     <h2 style="color: var(--azul);">📞 CONTACTO DIRECTO</h2>
-    <p style="font-size: 1.3rem; margin: 1rem 0;"><strong>José Murillo · Yesid Murillo</strong></p>
+    <p style="font-size: 1.3rem; margin: 1rem 0;"><strong>Yesid Murillo</strong> · Propietario</p>
     <p style="font-size: 1.2rem;">📱 320 489 1155 · 320 300 7128</p>
     <p>📍 Avenida 5 N° 0-50, La Merced · Cúcuta</p>
     <p>⏰ Lunes a sábado 8am - 6pm</p>
     <div style="margin-top: 1.5rem;">
-        <a href="https://wa.me/573204891155" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 WhatsApp José</a>
-        <a href="https://wa.me/573203007128" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 WhatsApp Yesid</a>
+        <a href="https://wa.me/573204891155" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 Contactar por WhatsApp</a>
     </div>
 </section>
 
+<!-- FOOTER (ORIGINAL) -->
 <footer class="footer-afiliado">
-    <p>&copy; 2026 Auto Taller Murillo · Todos los derechos reservados</p>
+    <p>&copy; 2026 Taller Murillo · Todos los derechos reservados</p>
     <p>Mecánica profesional con más de 15 años de experiencia</p>
     <div class="afiliado-link">
-        🔥 <a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Auto%20Taller%20Murillo" target="_blank">¿Quieres tu propia tarjeta digital?</a>
+        🔥 <a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Taller%20Murillo" target="_blank">¿Quieres tu propia tarjeta digital?</a>
     </div>
-    <p style="margin-top: 1rem;">Esta tarjeta fue creada por <strong>Tu Tarjeta Digital</strong> · Si alguien compra por este enlace, ellos ganan comisión.</p>
-    <p><a href="https://tusitio.com/ref/autotallermurillo" style="color: var(--oro);">Enlace de afiliado de Auto Taller Murillo</a></p>
+    <p style="margin-top: 1rem;">Esta tarjeta fue creada por <strong>Tu Tarjeta Digital</strong> · Si alguien compra por este enlace, Yesid gana comisión.</p>
+    <p><a href="https://tusitio.com/ref/taller-murillo" style="color: var(--oro);">Enlace de afiliado de Yesid</a></p>
 </footer>
 
 <script>
