@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller Murillo · Mecánica Profesional</title>
+    <title>Auto Taller Murillo · Mecánica Profesional</title>
     <style>
         * {
             margin: 0;
@@ -235,21 +235,30 @@
             display: block;
         }
 
+        /* ===== PARTE DERECHA: TÍTULO Y DATOS ===== */
         .hero-content {
             padding: 2.5rem;
         }
 
-        .hero-content h1 {
-            font-size: 2.8rem;
+        /* TÍTULO PRINCIPAL AUTO TALLER MURILLO */
+        .titulo-negocio {
+            font-size: 3.2rem;
+            font-weight: 900;
             color: var(--azul);
-            line-height: 1.2;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+            text-shadow: 3px 3px 0 rgba(240,180,0,0.2);
         }
 
-        .hero-content h1 small {
-            display: block;
-            font-size: 1.2rem;
+        .subtitulo-negocio {
+            font-size: 1.8rem;
+            font-weight: 400;
             color: var(--oro);
-            font-weight: 300;
+            letter-spacing: 4px;
+            border-bottom: 2px solid var(--oro);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .badge {
@@ -325,7 +334,7 @@
             border: 2px solid var(--azul);
         }
 
-        /* ===== SECCIÓN MISIÓN, VISIÓN, VALORES (NUEVA) ===== */
+        /* ===== MISIÓN, VISIÓN, VALORES ===== */
         .seccion-filosofia {
             max-width: 1200px;
             margin: 4rem auto;
@@ -392,7 +401,7 @@
             font-size: 1.3rem;
         }
 
-        /* ===== SECCIÓN QR (NUEVA) ===== */
+        /* ===== SECCIÓN QR ===== */
         .seccion-qr {
             max-width: 800px;
             margin: 4rem auto;
@@ -534,7 +543,7 @@
 
 <header>
     <div class="nav-container">
-        <div class="logo">TALLER <span>MURILLO</span></div>
+        <div class="logo">AUTO <span>TALLER MURILLO</span></div>
         <button class="hamburguesa" id="menuBtn">☰</button>
         <ul class="menu" id="menu">
             <li><a href="#inicio">Inicio</a></li>
@@ -542,13 +551,14 @@
             <li><a href="#filosofia">Filosofía</a></li>
             <li><a href="#qr">QR</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Auto%20Taller%20Murillo" target="_blank" style="background: var(--oro); color: var(--azul); padding: 0.5rem 1rem; border-radius: 30px;">🔥 Quiero mi tarjeta</a></li>
         </ul>
     </div>
 </header>
 
 <main id="inicio">
     <section class="hero">
-        <!-- ESCÁNER ANIMADO (ORIGINAL) -->
+        <!-- ESCÁNER ANIMADO -->
         <div class="hero-imagen">
             <div class="scanner-container">
                 <div class="scanner-screen">
@@ -580,10 +590,10 @@
             </div>
         </div>
 
-        <!-- PARTE DERECHA (TEXTO ORIGINAL) -->
+        <!-- PARTE DERECHA: TÍTULO Y DATOS -->
         <div class="hero-content">
-            <span class="badge">⚙️ MECÁNICA PROFESIONAL</span>
-            <h1>YESID <small>MURILLO</small></h1>
+            <div class="titulo-negocio">AUTO TALLER MURILLO</div>
+            <div class="subtitulo-negocio">MECÁNICA PROFESIONAL</div>
             
             <div class="servicios-destacados">
                 <strong>🔧 SERVICIOS ESPECIALIZADOS</strong><br>
@@ -597,16 +607,16 @@
             </div>
 
             <div class="botones">
-                <a href="https://wa.me/573204891155?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
-                    📱 WhatsApp 320 489 1155
+                <a href="https://wa.me/573204891155?text=Hola%20José,%20necesito%20información%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 José · 320 489 1155
                 </a>
-                <a href="https://wa.me/573203007128?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
-                    📱 WhatsApp 320 300 7128
+                <a href="https://wa.me/573203007128?text=Hola%20Yesid,%20necesito%20información%20sobre%20sus%20servicios" class="btn-wsp" target="_blank">
+                    📱 Yesid · 320 300 7128
                 </a>
                 <a href="tel:+573204891155" class="btn-llamada">
                     📞 Llamar ahora
                 </a>
-                <a href="https://wa.me/?text=¡Mira%20lo%20que%20encontré!%20Taller%20Murillo%20👉%20https://autotallermurillo.netlify.app" class="btn-compartir" target="_blank">
+                <a href="https://wa.me/?text=¡Mira%20lo%20que%20encontré!%20Auto%20Taller%20Murillo%20👉%20https://autotallermurillo.netlify.app" class="btn-compartir" target="_blank">
                     🎁 Compartir con un amigo
                 </a>
             </div>
@@ -614,7 +624,7 @@
     </section>
 </main>
 
-<!-- SECCIÓN DE SERVICIOS (ORIGINAL) -->
+<!-- SECCIÓN DE SERVICIOS -->
 <section id="servicios" class="seccion">
     <h2>SERVICIOS</h2>
     <div class="grid-3">
@@ -633,7 +643,7 @@
     </div>
 </section>
 
-<!-- NUEVA SECCIÓN: MISIÓN, VISIÓN, VALORES -->
+<!-- MISIÓN, VISIÓN, VALORES -->
 <section id="filosofia" class="seccion-filosofia">
     <h2>NUESTRA FILOSOFÍA</h2>
     <div class="grid-filosofia">
@@ -656,7 +666,7 @@
     </div>
 </section>
 
-<!-- NUEVA SECCIÓN: CÓDIGO QR GENERAL -->
+<!-- CÓDIGO QR GENERAL -->
 <section id="qr" class="seccion-qr">
     <h2>📲 COMPARTE ESTA TARJETA</h2>
     <div class="qr-container">
@@ -668,27 +678,28 @@
     </div>
 </section>
 
-<!-- SECCIÓN DE CONTACTO (ORIGINAL) -->
+<!-- CONTACTO -->
 <section id="contacto" class="contacto-box">
     <h2 style="color: var(--azul);">📞 CONTACTO DIRECTO</h2>
-    <p style="font-size: 1.3rem; margin: 1rem 0;"><strong>Yesid Murillo</strong> · Propietario</p>
+    <p style="font-size: 1.3rem; margin: 1rem 0;"><strong>José Murillo · Yesid Murillo</strong></p>
     <p style="font-size: 1.2rem;">📱 320 489 1155 · 320 300 7128</p>
     <p>📍 Avenida 5 N° 0-50, La Merced · Cúcuta</p>
     <p>⏰ Lunes a sábado 8am - 6pm</p>
     <div style="margin-top: 1.5rem;">
-        <a href="https://wa.me/573204891155" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 Contactar por WhatsApp</a>
+        <a href="https://wa.me/573204891155" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 WhatsApp José</a>
+        <a href="https://wa.me/573203007128" class="btn-wsp" style="display: inline-block; margin: 0.3rem;">📱 WhatsApp Yesid</a>
     </div>
 </section>
 
-<!-- FOOTER (ORIGINAL) -->
+<!-- FOOTER -->
 <footer class="footer-afiliado">
-    <p>&copy; 2026 Taller Murillo · Todos los derechos reservados</p>
+    <p>&copy; 2026 Auto Taller Murillo · Todos los derechos reservados</p>
     <p>Mecánica profesional con más de 15 años de experiencia</p>
     <div class="afiliado-link">
-        🔥 <a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Taller%20Murillo" target="_blank">¿Quieres tu propia tarjeta digital?</a>
+        🔥 <a href="https://wa.me/584227159158?text=Quiero%20mi%20tarjeta%20como%20la%20de%20Auto%20Taller%20Murillo" target="_blank">¿Quieres tu propia tarjeta digital?</a>
     </div>
-    <p style="margin-top: 1rem;">Esta tarjeta fue creada por <strong>Tu Tarjeta Digital</strong> · Si alguien compra por este enlace, Yesid gana comisión.</p>
-    <p><a href="https://tusitio.com/ref/taller-murillo" style="color: var(--oro);">Enlace de afiliado de Yesid</a></p>
+    <p style="margin-top: 1rem;">Esta tarjeta fue creada por <strong>Tu Tarjeta Digital</strong> · Si alguien compra por este enlace, ellos ganan comisión.</p>
+    <p><a href="https://tusitio.com/ref/autotallermurillo" style="color: var(--oro);">Enlace de afiliado de Auto Taller Murillo</a></p>
 </footer>
 
 <script>
